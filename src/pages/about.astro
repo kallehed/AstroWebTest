@@ -1,14 +1,35 @@
 ---
-
+const identity = {
+    name: "Kalle",
+    country: "Afganistan",
+    occupation: "blogger",
+}
+const skills = ["JAVA", "Object orientation", "Bussiness logic", "Markov chains"];
+const pageTitle = "About ME";
+const cool = true;
 ---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+    <body>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+        <h1> {pageTitle}</h1>
 
-<body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <h1> ABOUT ME</h1>
+        <h2> my new astro site yo {cool && <p> very cool!</p>}</h2>
 
-    <h2> my new astro site yo</h2>
-
-    <h3> I own 3 dogs of high calibre.</h3>
-</body>
+        <h3> I own 3 dogs of high calibre.</h3>
+        <p>
+            their names are:
+        </p>
+        <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+    </body>
+</html>
