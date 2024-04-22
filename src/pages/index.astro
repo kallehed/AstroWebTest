@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 const number = Math.random();
 const pageTitle = "Astro kalle";
 ---
@@ -13,9 +15,7 @@ const pageTitle = "Astro kalle";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-    	<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+		<Header />
 		<h1>{pageTitle}: {number}</h1>
 		<h2> YOO</h2>
 		<p>
@@ -23,5 +23,7 @@ const pageTitle = "Astro kalle";
 		</p>
 
 		<p> it has lots of amazing things in it.</p>
+		<Footer />
+		
 	</body>
 </html>
