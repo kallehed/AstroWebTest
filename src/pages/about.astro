@@ -1,4 +1,7 @@
 ---
+
+import '../styles/global.css';
+
 const identity = {
     name: "Kalle",
     country: "Afganistan",
@@ -7,6 +10,8 @@ const identity = {
 const skills = ["JAVA", "Object orientation", "Bussiness logic", "Markov chains"];
 const pageTitle = "About ME";
 const cool = true;
+const dogTextColor = "purple";
+const myFontWeight = 700;
 ---
 <html lang="en">
 	<head>
@@ -16,6 +21,16 @@ const cool = true;
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
+    <style define:vars={{dogTextColor, myFontWeight}}>
+        h1 {
+            color: blue;
+            font-size: 3.5rem;
+        }
+        .mydog {
+            color: var(--dogTextColor);
+            font-weight: var(--myFontWeight);
+        }
+    </style>
     <body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
@@ -29,7 +44,7 @@ const cool = true;
             their names are:
         </p>
         <ul>
-            {skills.map((skill) => <li>{skill}</li>)}
+            {skills.map((skill) => <li class="mydog">{skill}</li>)}
         </ul>
     </body>
 </html>
