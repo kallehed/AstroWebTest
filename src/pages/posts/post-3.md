@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My third blog post'
 pubDate: 2024-05-22
 description: 'about hingsdas'
@@ -7,7 +8,6 @@ tags: ["Booking"]
 
 ---
 
-# My first post
 
 contains many things
 

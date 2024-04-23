@@ -1,0 +1,24 @@
+---
+const {frontmatter} = Astro.props;
+import BaseLayout from "./BaseLayout.astro";
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+<!--  <h1>{frontmatter.title}</h1> -->
+<div class="post">
+    <em><strong>DESCRIPTION:</strong> {frontmatter.description}</em>
+    <p>Written by <em>{frontmatter.author}</em> in {frontmatter.pubDate.toString().slice(0,10)}</p>
+    <slot />
+</div>
+</BaseLayout>
+
+<style>
+    .post {
+        background-color: chartreuse;
+        padding: 1em 2em;
+    }
+    p {
+        font-weight: 400;
+        font-style: italic;
+    }
+</style>

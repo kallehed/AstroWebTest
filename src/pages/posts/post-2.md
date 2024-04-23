@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Le secon blog
 author: Lex luthor
 description: "big things happening"
