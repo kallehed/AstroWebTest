@@ -1,5 +1,6 @@
 ---
 const {frontmatter} = Astro.props;
+import Tags from "../components/Tags.astro";
 import BaseLayout from "./BaseLayout.astro";
 ---
 
@@ -8,6 +9,7 @@ import BaseLayout from "./BaseLayout.astro";
 <div class="post">
     <em><strong>DESCRIPTION:</strong> {frontmatter.description}</em>
     <p>Written by <em>{frontmatter.author}</em> in {frontmatter.pubDate.toString().slice(0,10)}</p>
+    Tags: <Tags tags={frontmatter.tags}/>
     <slot />
 </div>
 </BaseLayout>

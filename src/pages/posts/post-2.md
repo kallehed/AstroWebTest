@@ -4,6 +4,8 @@ title: Le secon blog
 author: Lex luthor
 description: "big things happening"
 pubDate: 1984-01-01
+tags: ["yolo", "astro"]
+
 ---
 
 After a successful first second of learning big things:

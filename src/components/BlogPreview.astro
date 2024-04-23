@@ -1,0 +1,19 @@
+---
+const {post} = Astro.props;
+import Tags from "./Tags.astro";
+---
+
+<div>
+    <a href={post.url}>
+        {post.frontmatter.title}
+    </a>
+    {post.frontmatter.tags &&
+    <Tags tags={post.frontmatter.tags}/>
+    }
+</div>
+
+<style>
+    span {
+        background-color: antiquewhite;
+    }
+</style>

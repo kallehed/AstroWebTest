@@ -4,7 +4,7 @@ title: 'My first blog post'
 pubDate: 2024-05-22
 description: 'about hings'
 author: 'lux lexer'
-tags: ["cooking"]
+tags: ["cooking", "astro", "books"]
 
 ---
 
