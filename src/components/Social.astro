@@ -2,16 +2,29 @@
 
 const {name, link} = Astro.props;
 
+const rotation = (Math.random() - 0.5) * 0.4;
+
 ---
 
 <p> here is my {name}:
     <a href={link}>{name}</a>
 </p>
 
-<style>
+<style define:vars={{ rotation}}>
     a {
-        padding: 0.5rem 1rem;
-        color: white;
-
+        color: #ff0000; /* Red text color */
+        background-color: #ffff00; /* Yellow background color */
+        padding: 8px 12px; /* Padding around the text */
+        border-radius: 4px; /* Rounded corners */
+        text-decoration: none; /* Remove default underline */
+        font-weight: bold; /* Make the text bold */
+        transition: transform 0.3s ease-in-out;
+        display: inline-block;
+    }
+    a:hover {
+        background-color: #ff9900; /* Orange background color on hover */
+        color: #ffffff; /* White text color on hover */
+        transform: rotate(calc(var(--rotation) * 1turn)) scale(1.2, 0.8) ;
+        
     }
 </style>
