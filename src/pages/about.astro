@@ -1,8 +1,6 @@
 ---
 
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const identity = {
     name: "Kalle",
@@ -15,38 +13,27 @@ const cool = true;
 const dogTextColor = "purple";
 const myFontWeight = 700;
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-    <style define:vars={{dogTextColor, myFontWeight}}>
-        h1 {
-            color: blue;
-            font-size: 3.5rem;
-        }
-        .mydog {
-            color: var(--dogTextColor);
-            font-weight: var(--myFontWeight);
-        }
-    </style>
-    <body>
-        <Header />
 
-        <h1> {pageTitle}</h1>
+<style define:vars={{dogTextColor, myFontWeight}}>
+    h1 {
+        color: blue;
+        font-size: 3.5rem;
+    }
+    .mydog {
+        color: var(--dogTextColor);
+        font-weight: var(--myFontWeight);
+    }
+</style>
+<BaseLayout pageTitle={pageTitle}>
 
-        <h2> my new astro site yo {cool && <p> very cool!</p>}</h2>
+    <h2> my new astro site yo {cool && <p> very cool!</p>}</h2>
 
-        <h3> I own 3 dogs of high calibre.</h3>
-        <p>
-            their names are:
-        </p>
-        <ul>
-            {skills.map((skill) => <li class="mydog">{skill}</li>)}
-        </ul>
-        <Footer />
-    </body>
-</html>
+    <h3> I own 3 dogs of high calibre.</h3>
+    <p>
+        their names are:
+    </p>
+    <ul>
+        {skills.map((skill) => <li class="mydog">{skill}</li>)}
+    </ul>
+
+</BaseLayout>
