@@ -4,7 +4,7 @@ import Tags from "./Tags.astro";
 ---
 
 <div>
-    <a href={post.url}>
+    <a href={post.url} class="text-blue-100 underline text-xl font-bold">
         {post.frontmatter.title}
     </a>
     {post.frontmatter.tags &&

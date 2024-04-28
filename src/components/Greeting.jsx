@@ -8,7 +8,7 @@ export default function Greeting({messages}) {
 
     return (
         <div>
-            <h3>{greeting}! Thank you for le visit!</h3>
+            <h3 class="bg-rose-500 text-9xl hover:text-yellow-400 transition hover:rotate-1 font-medium cursor-not-allowed">{greeting}! Thank you for le visit!</h3>
             <button onClick={() => setGreeting(randomMessage())} style="
 		font-weight: 400;
 		text-align: center;
@@ -21,7 +21,7 @@ export default function Greeting({messages}) {
 		line-height: 1.5;
 		border-radius: .25rem;
 		
-	">
+	" class="bg-purple-300">
                 New greeting
             </button>
         </div>

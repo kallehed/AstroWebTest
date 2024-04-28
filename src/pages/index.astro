@@ -8,11 +8,11 @@ const pageTitle = "Astro kalle : " + number;
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2> YOO</h2>
-	<p>
+	<p class="skew-y-6 hover:skew-y-12">
 		this is my new astro site, very cool I know.
 	</p>
 
-	<p> it has lots of amazing things in it.</p>
+	<p class="text-1xl font-bold underline"> it has lots of amazing things in it.</p>
 	<Greeting client:load messages={["Hi", "Hello", "Yo", "Whatcha doing?", "Howdddddy"]} />
 
 </BaseLayout>

@@ -6,7 +6,7 @@ const {pageTitle} = Astro.props;
 import { ViewTransitions } from "astro:transitions";
 ---
 
-<html lang="en">
+<html lang="en" class="grayscale hover:grayscale-0 cursor-progress ">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -15,9 +15,9 @@ import { ViewTransitions } from "astro:transitions";
         <title>{pageTitle}</title>
         <ViewTransitions />
     </head>
-    <body>
+    <body class="shadow-xl">
         <Header />
-        <h1 transition:animate="slide">{pageTitle}</h1>
+        <h1 class="transition-all ease-in-out hover:scale-y-150" transition:animate="slide">{pageTitle}</h1>
         <slot />
         <Footer />
         <script>
