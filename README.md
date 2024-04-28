@@ -1,3 +1,9 @@
+# MY TERRIBLE WEBSITE USING ASTRO + PREACT + TAILWIND
+found at https://lirk.netlify.app/
+
+
+
+
 # Astro Starter Kit: Minimal
 
 ```sh
