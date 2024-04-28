@@ -2,15 +2,19 @@
 const {frontmatter} = Astro.props;
 import Tags from "../components/Tags.astro";
 import BaseLayout from "./BaseLayout.astro";
+import { fade } from "astro:transitions";
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
 <!--  <h1>{frontmatter.title}</h1> -->
-<div class="post">
+<div class="post" >
     <em><strong>DESCRIPTION:</strong> {frontmatter.description}</em>
-    <p>Written by <em>{frontmatter.author}</em> in {frontmatter.pubDate.toString().slice(0,10)}</p>
+    <p >Written by <em>{frontmatter.author}</em> in {frontmatter.pubDate.toString().slice(0,10)}</p>
     Tags: <Tags tags={frontmatter.tags}/>
-    <slot />
+    <div transition:animate={fade({ duration: '2s'})} >
+        <slot />
+    </div>
+    
 </div>
 </BaseLayout>
 
